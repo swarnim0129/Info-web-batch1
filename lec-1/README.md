@@ -1,4 +1,3 @@
-````markdown
 # 🚀 Lecture 1: Introduction to HTML
 
 ## 📖 What is HTML?
@@ -171,5 +170,3 @@ Create a single `.html` file using only HTML. Include all tasks below in that on
 
   * `colspan` in one row
   * `rowspan` in another
-
-````
