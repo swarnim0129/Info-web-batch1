@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    .container{
+        border: 2px solid black;
+        display: flex;
+        gap:10px;
+        /* justify-content: end;
+        justify-content: center;
+        justify-content: space-between; */
+        /* justify-content: space-evenly; */
+        /* justify-content:space-around; */
+    }
+    *{
+        font-family: "Poppins", sans-serif;
+    }
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border-bottom: 2px solid gray; */
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: row;
+        height: 30px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .items{
+        display:flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .items li a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .box{
+        border: 2px solid black;
+    }
+
+    .block{
+        display: block;
+        background-color: yellow
+    }
+    .inline{
+        display: inline;
+        background-color: red;
+        width:300px;
+    }
+
+    .inlineBlock{
+        display:inline-block;
+        background-color: green;
+        color: white;
+        width:300px;
+    }
+
+    .displayGrid{
+        display: grid;
+        border: 2px solid black;
+        grid-template-columns:1fr 1fr 2fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5fr 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        column-gap: 10px;
+
+    }
+    .element{
+        border:1px solid black;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+    <nav class="navbar">
+        <div class="heading">
+            <img src="/lec-1/img1.jpg" style="border-radius: 50%;" alt="" width="30px">
+            <h3>My Website</h3>
+        </div>
+        
+        <div>
+            <ul class="items">
+                <li><a href="./page1.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="box">
+        <div class="block">Display Block</div>
+        <div class="inline">Display Inline</div>
+        <div class="inlineBlock">Display Inline Block</div>
+    </div>
+<br><br><br><br><br><br><br><br><br><br>
+
+    <div class="displayGrid">
+    
+            <div class="element">Element 1</div>
+            <div class="element">Element 2</div>
+            <div class="element">Element 3</div>
+            <div class="element">Element 4</div>
+            <div class="element">Element 5</div>
+            <div class="element">Element 6</div>
+            <div class="element">Element 7</div>
+            <div class="element">Element 8</div>
+            <div class="element">Element 9</div>
+            <div class="element">Element 10</div>
+            <div class="element">Element 1</div>
+            <div class="element">Element 2</div>
+            <div class="element">Element 3</div>
+            <div class="element">Element 4</div>
+            <div class="element">Element 5</div>
+            <div class="element">Element 6</div>
+            <div class="element">Element 7</div>
+            <div class="element">Element 8</div>
+            
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
