@@ -49,11 +49,13 @@
 
     .box{
         border: 2px solid black;
+        align-items: center;
     }
 
     .block{
         display: block;
-        background-color: yellow
+        background-color: yellow;
+        text-align:center;
     }
     .inline{
         display: inline;
@@ -66,16 +68,16 @@
         background-color: green;
         color: white;
         width:300px;
+        text-align: center;
     }
 
     .displayGrid{
         display: grid;
         border: 2px solid black;
-        grid-template-columns:1fr 1fr 2fr 1fr 1fr 1fr;
+        grid-template-columns:repeat(3,1fr);
         grid-template-rows: 1fr 5fr 1fr 1fr 1fr 1fr;
         gap: 5px;
         column-gap: 10px;
-
     }
     .element{
         border:1px solid black;
@@ -102,7 +104,7 @@
     
     <div class="box">
         <div class="block">Display Block</div>
-        <div class="inline">Display Inline</div>
+        <div class="inline">Inline Display </div>
         <div class="inlineBlock">Display Inline Block</div>
     </div>
 <br><br><br><br><br><br><br><br><br><br>
