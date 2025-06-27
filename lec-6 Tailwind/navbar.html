@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dehaze" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dehaze" />
 
 </head>
 
 <body>
-    <nav class="flex justify-between bg-blue-200 py-1 px-2 ">
-        <div class="flex ">
-            <img class="w-6 rounded-full" src="../lec-1/img1.jpg" alt="">
-            <h3>My Web<span class="text-purple-700 font-bold">sit</span>e</h3>
-            
-            
-        </div>
-        <div>
-            <ul class="flex gap-10 hidden sm:flex">
-                <li><a href="">item1</a></li>
-                <li><a href="">item2</a></li>
-                <li><a href="">item3</a></li>
-            </ul>
-            <div class="sm:hidden">
-                <span class="material-symbols-outlined text-4xl text-blue-600 cursor-pointer">
-                    dehaze
-                </span>
+    <div class="h-dvh z-10 bg-red-700 items-center">
+        <nav class="flex z-0 justify-between items-center bg-blue-200 py-1 px-2 ">
+            <div class="flex">
+                <img class="w-6 rounded-full" src="../lec-1/img1.jpg" alt="">
+                <h3>My Web<span class="text-purple-700 font-bold">sit</span>e</h3>
             </div>
-        </div>
-    </nav>
+            <div>
+                <ul class="flex gap-10 hidden sm:flex">
+                    <li><a href="">item1</a></li>
+                    <li><a href="">item2</a></li>
+                    <li><a href="">item3</a></li>
+                </ul>
+                <div class="sm:hidden">
+                    <span class="material-symbols-outlined text-4xl text-blue-600 cursor-pointer">
+                        dehaze
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <div class="w-1/2 mx-auto bg-blue-200 p-4 mt-10">
+      I'm horizontally centered!
+    </div>
+
+    <section class="border border-white">
+        <h2 class="w-fit mx-auto font-bold text-sm  md:text-md lg:text-lg">Responsive Section</h2>
+        <p class="text-sm md:text-lg mx-auto w-fit">This section should look different on mobile vs desktop using Tailwind's responsive classes.</p>
+    </section>
+    </div>
+
+
 </body>
+
 </html>
