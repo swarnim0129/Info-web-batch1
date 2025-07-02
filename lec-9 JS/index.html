@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    DOM -> Document object model 
+    <br>
+    document.getElementById();
+
+    <p id="p1">Hello</p>
+    
+    <input type="text" name="" id="i1">
+    <input type="submit" value="Submit" onclick="getVal()">
+
+    <script>
+        
+        // alert("Hello");
+        // window.alert("Cancel");
+        // window.confirm("Yes or no?");
+        
+        // console.log(text);
+
+        function getVal(){
+            let text = document.getElementById("i1").value;
+            alert("Hello "+text);
+        }
+        
+    </script>
+</body>
+</html>
