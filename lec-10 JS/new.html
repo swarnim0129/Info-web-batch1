@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h2 id="heading">Hemllooo</h2>
+    <input type="text" class="border" name="" id="username">
+    <input type="button" onclick="greetings()" value="click me" class="border px-2 rounded-md">
+    <br><br>
+    <h4> onclick , onmouseenter , onmouseleave , onkeydown ,onkeyup </h4>
+    <h4> document.getElementByClassName</h4>
+    <h4> document.getElementByTagName</h4>
+    <h4> document.querySelector</h4>
+    <h4> document.querySelectorAll</h4>
+    <br><br><br>
+
+    <div class="relative border border-dashed w-1/2 mx-auto h-50" id="box" onmouseenter="mouseEnter()"
+        onmouseleave="mouseLeave()">
+        <h2 class="absolute top-1/2 left-1/4" id="t1">Mouse is :</h2>
+    </div>
+    <br><br><br><br><br>
+
+    <h3 class="items">item1</h3>
+    <h3 class="items">item2</h3>
+    <h3 class="items">item3</h3>
+    <h3 class="items">item4</h3>
+    <h3 class="items">item5</h3>
+    <br><br><br><br><br><br>
+
+    <h6>This is h6 tag</h6>
+    <h6>This is h6 tag</h6>
+    <h6>This is h6 tag</h6>
+    <h6>This is h6 tag</h6>
+    <h6>This is h6 tag</h6>
+    <h6>This is h6 tag</h6>
+
+    <h4 id="element1" class="ele">This is a h4 element</h4>
+    <h4 id="element2" class="ele">This is a h4 element</h4>
+    <h4 id="element3" class="ele">This is a h4 element</h4>
+    <h4 id="element4" class="ele">This is a h4 element</h4>
+    <h4 id="element5" class="ele">This is a h4 element</h4>
+
+    <div class="w-screen ">
+        <img src="../lec-1/img1.jpg" id="image" class="w-1/2 mx-auto " alt="">
+        <input type="button"  value="Replace" class="border px-2 rounded-md ml-50" onclick="ReplaceImage()">
+    </div>
+
+    <script>
+        const heading = document.getElementById("heading").innerText;
+        console.log(heading);
+
+        function greetings() {
+            const username = document.getElementById("username").value;
+            alert("Hello " + username);
+        }
+
+        function mouseEnter() {
+            const t1 = document.getElementById("t1");
+            t1.innerHTML = "Mouse is :inside";
+            const box = document.getElementById("box");
+            box.style.background = "gray";
+            t1.style.color = "white";
+            box.style.cursor = "pointer";
+        }
+
+        function mouseLeave() {
+            const t1 = document.getElementById("t1");
+            t1.innerHTML = "Mouse is :outside";
+            const box = document.getElementById("box");
+            box.style.background = "white";
+            t1.style.color = "black";
+        }
+
+        const items = document.getElementsByClassName("items");
+        console.log(items);
+        // items[0].style.color="purple";
+
+        // console.log(items.length)
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.color = "purple";
+        }
+
+        const h6 = document.getElementsByTagName("h6");
+        console.log(h6);
+
+        for (let i = 0; i < h6.length; i++) {
+            h6[i].style.color = "white";
+            h6[i].style.marginLeft = "100px";
+            h6[i].style.marginTop = "10px";
+            h6[i].style.background = "black";
+        }
+
+        // const ele = document.querySelector(".ele");
+        // console.log(ele);
+        // ele.style.color="white";
+        // ele.style.background="green";
+
+        const ele = document.querySelectorAll(".ele");
+        console.log(ele);
+        for (let i = 0; i < ele.length; i++) {
+            ele[i].style.color = "white";
+            ele[i].style.background = "green";
+        }
+
+
+        function ReplaceImage(){
+            const image=document.getElementById("image");
+            image.src="../lec-1/img2.jpg";
+        }
+    
+
+    </script>
+
+
+</body>
+
+</html>

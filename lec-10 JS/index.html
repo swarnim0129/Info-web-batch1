@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Practice</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <p class="text" id="i1">One</p>
+    <p class="text" id="i1">Two</p>
+
+    <input type="text" id="username">
+    <br>
+    <input type="submit" value="Submit" id="btn" onclick="clickMe()">
+
+    <br><br><br><br><br>
+    <select class="border rounded-md" id="fruits" onchange="getFruit()">
+        <option value="Select a Fruit">Select a Fruit</option>
+        <option value="Mango">Mango</option>
+        <option value="Orange">Orange</option>
+        <option value="Apple">Apples</option>
+        <option value="Mango">Mango</option>
+    </select>
+    <br>
+    <p id="fr"></p>
+
+    <br><br>
+    <div onmouseenter="inside()" onmouseleave="outside()" class="relative box w-1/2 mx-auto h-50 border-2 border-dashed rounded-md hover:italic transition duration:900" id="box">
+        <h2 class="absolute top-1/2 left-1/2 -translate-x-7 -translate-y-5">Hover me</h2>
+        <h2 class="absolute top-1/2 left-1/2 -translate-x-12 translate-y-3" id="t1">Mouse is inside</h2>
+    </div>
+
+    <p class="x" id="item1">One</p>
+    <p class="x" id="item2">Two</p>
+    <p class="x3" id="item3">Three</p>
+
+    <h4>Helloooo</h4>
+
+    <br><br><br>
+    <div class="w-1/2 mx-auto relative ">
+        <p class="w-1/4 mx-auto" id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, vel iste quia unde tenetur adipisci architecto error doloremque, voluptas necessitatibus odio saepe perferendis eos. Harum esse non voluptas unde reiciendis!</p>
+        <br><br>
+    </div>
+    <input class="w-1/10 border rounded-lg shadow-lg bg-gray-200 text-black" type="button" value="Hide" onclick="hide()">
+    <input class="w-1/10 border rounded-lg shadow-lg bg-gray-200 text-black" type="button" value="Show" onclick="show()">
+
+    <br><br><br><br><br><br>
+    <h1>Item1</h1>
+    <h1>Item2</h1>
+    <h1>Item3</h1>
+    <h1>Item4</h1>
+    <h1>Item5</h1>
+    <h1>Item6</h1>
+
+    <h5 class="h5">Item1</h5>
+    <h5 class="h5">Item2</h5>
+    <h5 class="h5">Item3</h5>
+    <h5 class="h5">Item4</h5>
+    <h5 class="h5">Item5</h5>
+    <h5 class="h5">Item6</h5>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="relative w-screen mb-50">
+        <img id="image" src="../lec-1/img1.jpg" class="w-60 mx-auto  " alt="img">
+        <input type="button" value="replace" class="border px-2 rounded-lg" onclick="replaceImg()">
+    </div>
+
+    <script>
+        let num=1;
+        function replaceImg(){
+            const image=document.getElementById("image");
+            image.src=`../lec-1/img${num}.jpg`;
+            if(num===1){
+                num+=1;
+            }
+            else{
+                num-=1;
+            }
+        }
+
+        const element = document.getElementsByClassName("text");
+        console.log(element[0].innerText);
+
+        const element2 = document.getElementById("i1");
+        console.log(element2.innerText);
+
+        const text = document.querySelectorAll(".x");
+        text[0].style.color = "purple";
+        text[1].style.color = "orange";
+
+        const textID = document.querySelector("#item2");
+        textID.style.color = "Green";
+
+        const x3 = document.getElementsByClassName("x3");
+        x3[0].style.color = "blue";
+
+        const h4 = document.getElementsByTagName("h4");
+        h4[0].style.color = "yellow";
+        h4[0].style.background = "black";
+        h4[0].style.padding = "7px";
+
+        const h1 = document.getElementsByTagName("h1");
+        h1[0].style.marginLeft = "100px";
+        for (let i = 0; i < h1.length; i++) {
+            h1[i].style.marginLeft = "100px";
+        }
+
+        const h5 = document.querySelectorAll(".h5");
+        h5.forEach(element => {
+            element.style.color = "blue";
+            element.style.marginLeft = "100px";
+        });
+
+        function clickMe() {
+            var username = document.getElementById("username").value;
+            alert("Hello " + username);
+        }
+
+        function getFruit() {
+            let fruit = document.getElementById("fruits").value;
+            const fr = document.getElementById("fr");
+            fr.innerHTML = `The fruit which is selected is: ${fruit} `;
+        }
+
+        function inside() {
+            const t1 = document.getElementById("t1");
+            t1.innerHTML = "Mouse is inside";
+            const box = document.getElementById("box");
+            box.style.backgroundColor = "grey";
+            t1.style.color = "white";
+        }
+
+        function outside() {
+            const t1 = document.getElementById("t1");
+            t1.innerHTML = "Mouse is outside";
+            const box = document.getElementById("box");
+            box.style.backgroundColor = "white";
+            t1.style.color = "black";
+        }
+
+        function hide() {
+            const paragraph = document.getElementById("paragraph");
+            paragraph.style.color = "white";
+        }
+
+        function show() {
+            const paragraph = document.getElementById("paragraph");
+            paragraph.style.color = "black";
+        }
+
+        function keyUP() {
+            console.log("Key UP");
+        }
+
+        function keyDown() {
+            console.log("Key Down");
+        }
+
+        function click() {
+            console.log("click");
+        }
+
+        document.addEventListener("keyup", keyUP);
+        document.addEventListener("keydown", keyDown);
+        document.addEventListener("click", click);
+
+    </script>
+</body>
+</html>
