@@ -46,6 +46,8 @@
     <h4 id="element4" class="ele">This is a h4 element</h4>
     <h4 id="element5" class="ele">This is a h4 element</h4>
 
+    
+
     <div class="w-screen ">
         <img src="../lec-1/img1.jpg" id="image" class="w-1/2 mx-auto " alt="">
         <input type="button"  value="Replace" class="border px-2 rounded-md ml-50" onclick="ReplaceImage()">
@@ -57,7 +59,7 @@
 
         function greetings() {
             const username = document.getElementById("username").value;
-            alert("Hello " + username);
+            alert(`Hello ${username}`);
         }
 
         function mouseEnter() {
@@ -109,11 +111,19 @@
         }
 
 
+        let num=1;
         function ReplaceImage(){
             const image=document.getElementById("image");
-            image.src="../lec-1/img2.jpg";
+            image.src=`../lec-1/img${num}.jpg`;
+            if(num==1){
+                num+=1;
+            }
+            else{
+                num-=1;
+            }
         }
-    
+        
+        
 
     </script>
 
