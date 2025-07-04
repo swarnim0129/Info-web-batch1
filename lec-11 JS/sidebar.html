@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+</head>
+<style>
+    .nav-bar {
+        display: flex;
+        background-color: gray;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transition: left 0.3s ease-in-out;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .nav-hidden {
+        left: -200px;
+    }
+</style>
+
+<body>
+    <div class="nav-bar" id="navbar">
+        <nav class="">
+            <ul class="flex flex-col gap-12 pl-9 pt-15">
+                <li><a href="">item1</a></li>
+                <li><a href="">item2</a></li>
+                <li><a href="">item3</a></li>
+                <li><a href="">item4</a></li>
+            </ul>
+        </nav>
+        <button class="absolute left-50 border rounded-full hover:bg-gray-600 hover:text-white shadow-lg px-2 cursor-pointer" id="btn"><span
+                class=" material-symbols-outlined pt-1">
+                arrow_forward_ios
+            </span></button>
+    </div>
+    
+    <script>
+        const nav = document.getElementById("navbar");
+        const btn = document.getElementById("btn");
+
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("nav-hidden");
+        });
+
+        nav.addEventListener("mouseenter", () => {
+            nav.style.background="green";
+        })
+
+        nav.addEventListener("mouseleave",()=>{
+            nav.style.background="gray";
+        })
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
