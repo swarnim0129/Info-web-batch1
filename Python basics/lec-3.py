@@ -48,3 +48,17 @@
 # while i <=10:
 #     print(i)
 #     i+=2
+
+passwrod="admin123"
+attempts = 0
+
+while attempts < 3:
+    entered_password = input("Enter your password: ")
+    if entered_password == passwrod:
+        print("Access granted")
+        break
+    else:
+        attempts += 1
+        print(f"Incorrect password. You have {3 - attempts} attempts left.")
+if attempts == 3:
+    print("Access denied. Too many incorrect attempts.")
